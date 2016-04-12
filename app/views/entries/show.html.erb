@@ -1,0 +1,9 @@
+<h1>Entry: <%= @entry.name %></h1>
+
+<p>
+  Author: <%= @entry.author %><br>
+  Category: <%= @entry.category&.name %>
+</p>
+
+<h3>Observations</h3>
+<pre><%= JSON.pretty_generate(@entry.observations) %></pre>

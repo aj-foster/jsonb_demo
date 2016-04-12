@@ -1,0 +1,9 @@
+<h1>Entries</h1>
+
+<% if @entries.any? %>
+<ul>
+  <% @entries.each do |entry| %>
+    <li><%= link_to entry.name, entry_path(entry) %></li>
+  <% end %>
+</ul>
+<% end %>

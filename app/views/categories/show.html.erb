@@ -1,0 +1,13 @@
+<h1>Category: <%= @category.name %></h1>
+
+<h3>Fields</h3>
+<pre><%= JSON.pretty_generate(@category.fields) %></pre>
+
+<h3>Entries</h3>
+<% if @category.entries.any? %>
+<ul>
+  <% @category.entries.each do |entry| %>
+    <li><%= link_to entry.name, entry_path(entry) %></li>
+  <% end %>
+</ul>
+<% end %>

@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JsonbDemo</title>
+  <title>Rails jsonb Demo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav>
+      <%= link_to "Entries", entries_path %> | <%= link_to "Categories", categories_path %>
+    </nav>
+  </header>
 
 <%= yield %>
 
